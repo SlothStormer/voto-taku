@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from "../components/Navbar.astro";
+import VideoBG from "../components/VideoBG.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <VideoBG />
+  <Navbar />
+  <main class="fixed w-full h-screen flex flex-col items-center justify-center">
+    <div
+      class="w-2/3 h-screen flex flex-col sm:flex-row items-center justify-center"
+    >
+      <div
+        class="bg-black bg-opacity-75 backdrop-blur flex flex-col items-center justify-center sm:mr-2 p-2 rounded-lg w-full"
+      >
+        <h1 class="text-4xl text-white font-bold">Top 100 Openings</h1>
+        <p class="text-2xl text-white">Vota por tu opening favorito</p>
+        <div class="w-full flex flex-row justify-between text-white">
+          <p>Finalizado!</p>
+          <a href="">Resultados</a>
+        </div>
+      </div>
+      <div class="bg-white h-2/3 w-0.5 hidden sm:inline rounded-lg"></div>
+      <div
+        class="bg-black bg-opacity-75 backdrop-blur flex flex-col items-center justify-center sm:ml-2 p-2 rounded-lg w-full"
+      >
+        <h1 class="text-4xl text-purple-300 font-bold">Top 50 Endings</h1>
+        <p class="text-2xl text-white">Vota por tu ending favorito</p>
+        <div class="w-full flex flex-row justify-between text-white">
+          <p>Proximamente...</p>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  :root {
+    margin: 0;
+    padding: 0;
+  }
+</style>

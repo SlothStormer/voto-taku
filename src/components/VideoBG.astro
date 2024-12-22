@@ -1,0 +1,46 @@
+---
+import videobg from "../assets/videobg.mp4";
+import ToggleMute from "./ToggleMute.svelte";
+---
+
+<video class="" id="video" autoplay loop muted src={videobg}> </video>
+<ToggleMute client:only />
+
+<script>
+  /*
+  const video = document.getElementById("video");
+  const button = document.querySelector("button");
+
+  if (video instanceof HTMLVideoElement) {
+    video.play();
+  }
+
+  button?.addEventListener("click", toggleMusic);
+
+  function toggleMusic() {
+    if (video instanceof HTMLVideoElement) {
+      if (video.muted) {
+        video.muted = false;
+      } else {
+        video.muted = true;
+      }
+    }
+  }
+    */
+</script>
+
+<style>
+  #video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  video {
+    max-width: none;
+  }
+</style>
