@@ -15,7 +15,7 @@
 
 <button
   on:click={toggleMute}
-  class="fixed bottom-8 left-8 bg-purple-300 p-3 rounded-lg z-10 shadow-lg"
+  class="fixed bottom-8 left-8 bg-purple-300 p-3 rounded-lg z-10 shadow-lg hover:bg-purple-500 "
 >
   {#if $muted}
     <svg
@@ -39,7 +39,7 @@
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="size-6"
+      class="size-6 "
     >
       <path
         stroke-linecap="round"

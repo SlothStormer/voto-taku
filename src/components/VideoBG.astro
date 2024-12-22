@@ -2,10 +2,9 @@
 import videobg from "../assets/videobg.mp4";
 import ToggleMute from "./ToggleMute.svelte";
 ---
-
-<video class="" id="video" autoplay loop muted src={videobg}> </video>
+<i id="pixel"></i>
+<video class="" id="video" autoplay loop  src={videobg}> </video>
 <ToggleMute client:only />
-
 <script>
   /*
   const video = document.getElementById("video");
@@ -38,6 +37,14 @@ import ToggleMute from "./ToggleMute.svelte";
     height: 100%;
     object-fit: cover;
     z-index: -1;
+  }
+  #pixel{
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/pixel.webp");
+    background-repeat: repeat;
   }
 
   video {
