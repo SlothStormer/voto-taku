@@ -2,31 +2,12 @@
 import videobg from "../assets/videobg.mp4";
 import ToggleMute from "./ToggleMute.svelte";
 ---
+
 <i id="pixel"></i>
-<video class="" id="video" autoplay loop  src={videobg}> </video>
+<video id="video" autoplay muted loop>
+  <source src={videobg} type="video/mp4" />
+</video>
 <ToggleMute client:only />
-<script>
-  /*
-  const video = document.getElementById("video");
-  const button = document.querySelector("button");
-
-  if (video instanceof HTMLVideoElement) {
-    video.play();
-  }
-
-  button?.addEventListener("click", toggleMusic);
-
-  function toggleMusic() {
-    if (video instanceof HTMLVideoElement) {
-      if (video.muted) {
-        video.muted = false;
-      } else {
-        video.muted = true;
-      }
-    }
-  }
-    */
-</script>
 
 <style>
   #video {
@@ -38,6 +19,7 @@ import ToggleMute from "./ToggleMute.svelte";
     object-fit: cover;
     z-index: -1;
   }
+
   #pixel{
     position: fixed;
     z-index: 0;
