@@ -10,11 +10,10 @@ import Layout from "../layouts/Layout.astro";
   <main class="fixed w-full h-screen flex flex-col items-center justify-center">
     <div class="w-11/12 sm:w-2/3 h-screen flex flex-col sm:flex-row items-center justify-center gap-6">
       <!-- Top 100 Openings Section -->
-      <div id="topOpenings" class="hover-section h-48 bg-black bg-opacity-75 backdrop-blur-md flex flex-col items-center justify-center sm:mr-4 p-6 rounded-lg shadow-lg w-full sm:w-1/2">
+      <div id="topOpenings" class="hover-section h-48 bg-black border-2 hover:border-purple-300 bg-opacity-25 backdrop-blur-md flex flex-col items-center justify-center sm:mr-4 p-6 rounded-lg shadow-lg w-full sm:w-1/2 transition-colors duration-150">
         <h1 class="text-4xl text-purple-300 font-extrabold mb-2">Top 100 Openings</h1>
         <p class="text-lg text-gray-300 mb-4">Vota por tu opening favorito</p>
         <div class="w-full mt-10 flex flex-row justify-between items-center text-white">
-
           <p class="text-sm  text-gray-400">Finalizado!</p>
           <a 
             href="#" 
@@ -28,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="bg-gradient-to-b from-purple-500 to-blue-500 h-2 sm:h-auto w-full sm:w-0.5 rounded-lg hidden sm:block"></div>
 
       <!-- Top 50 Endings Section -->
-      <div id="topEndings" class="hover-section  bg-black bg-opacity-75 backdrop-blur-md flex flex-col items-center justify-center sm:ml-4 p-6 h-48 rounded-lg shadow-lg w-full sm:w-1/2">
+      <div id="topEndings" class="hover-section h-48 bg-black border-2 hover:border-purple-300 bg-opacity-25 backdrop-blur-md flex flex-col items-center justify-center sm:mr-4 p-6 rounded-lg shadow-lg w-full sm:w-1/2 transition-colors duration-150">
         <h1 class=" text-4xl text-purple-300 font-extrabold mb-2">Top 50 Endings</h1>
         <p class="text-lg text-gray-300 mb-4">Vota por tu ending favorito</p>
         <div class="w-full flex flex-row justify-between items-center text-white">
