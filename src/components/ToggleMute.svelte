@@ -15,7 +15,7 @@
 
 <button
   on:click={toggleMute}
-  class="fixed bottom-8 left-8 bg-purple-300 p-3 rounded-lg z-10 shadow-lg hover:bg-purple-500 hover:text-white transition-colors duration-150 ease-in-out"
+  class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-purple-300 p-3 rounded-lg z-10 shadow-lg hover:bg-purple-500 hover:text-white transition-colors duration-150 ease-in-out"
 >
   {#if $muted}
     <svg
