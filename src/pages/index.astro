@@ -1,73 +1,88 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import VideoBG from "../components/VideoBG.astro";
 import Layout from "../layouts/Layout.astro";
+
+const cards = [
+    {
+        title: "Openings",
+        description: "Vota por el mejor opening",
+        emoji: "🎵",
+        href: "/openings"
+    },
+    {
+        title: "Endings",
+        description: "Vota por el mejor ending",
+        emoji: "🎶",
+        href: "/endings"
+    }
+];
+
+//const topOpenings = getTopOpenings(); TODO
+//const topEndings = getTopEndings(); TODO
+const topOpenings: any[] = [
+    {
+        title: "Black Clover OP10",
+        grade: 9.25
+    },    {
+        title: "Fullmetal Alchemist: Brotherhood OP1",
+        grade: 9.2
+    },    {
+        title: "Attack on Titan S2 OP1",
+        grade: 9
+    },    {
+        title: "Attack on Titan Final Season Part 2 OP",
+        grade: 8.95
+    },    {
+        title: "Naruto Shippuden OP3",
+        grade: 8.9
+    }
+]
 ---
 
-<Layout>
-  <Navbar />
+<Layout title="Inicio">
   <VideoBG />
-  <main class="fixed w-full h-screen flex flex-col items-center justify-center">
-    <div class="w-11/12 sm:w-2/3 h-screen flex flex-col sm:flex-row items-center justify-center gap-6">
-      <!-- Top 100 Openings Section -->
-      <div id="topOpenings" class="hover-section h-48 bg-black bg-opacity-75 backdrop-blur-md flex flex-col items-center justify-center sm:mr-4 p-6 rounded-lg shadow-lg w-full sm:w-1/2">
-        <h1 class="text-4xl text-purple-300 font-extrabold mb-2">Top 100 Openings</h1>
-        <p class="text-lg text-gray-300 mb-4">Vota por tu opening favorito</p>
-        <div class="w-full mt-10 flex flex-row justify-between items-center text-white">
-
-          <p class="text-sm  text-gray-400">Finalizado!</p>
-          <a 
-            href="#" 
-            class="text-purple-900  hover:text-purple-100 rounded-lg text-sm font-semibold bg-purple-300 hover:bg-purple-400 p-2 transition-all">
-            Resultados
-          </a>
+  <main class="max-w-7xl mx-auto px-4 py-6 md:py-8 text-white mt-16">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-8">
+        Bienvenido a
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-white whitespace-nowrap">
+          Voto-Taku
+        </span>
+      </h1>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 mb-16 px-4">
+      {cards.map(card => (
+        <a href={card.href} class="w-full max-w-sm bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-8 text-center text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-xl" data-astro-prefetch="load">
+            <h2 class="text-2xl md:text-3xl text-accent-light">{card.title}</h2>
+            <p class="my-4 opacity-90">{card.description}</p>
+            <div class="text-5xl">{card.emoji}</div>
+        </a>
+    ))}
+    </div>
+    <div class="mt-16">
+      <h2 class="text-2xl md:text-3xl text-center text-accent-light mb-8 bi">
+        Rankings actuales
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg">
+          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">Openings</h3>
+          <ol class="list-decimal pl-6">
+            {topOpenings.map(item => (
+                <li class="mb-3">
+                    <span class="font-bold text-sm md:text-base">{item.title}</span>
+                    <span class="block text-accent-light text-xs md:text-sm">{item.grade}</span>
+                </li>
+            ))}
+          </ol>
         </div>
-      </div>
-
-      <!-- Separator -->
-      <div class="bg-gradient-to-b from-purple-500 to-blue-500 h-2 sm:h-auto w-full sm:w-0.5 rounded-lg hidden sm:block"></div>
-
-      <!-- Top 50 Endings Section -->
-      <div id="topEndings" class="hover-section  bg-black bg-opacity-75 backdrop-blur-md flex flex-col items-center justify-center sm:ml-4 p-6 h-48 rounded-lg shadow-lg w-full sm:w-1/2">
-        <h1 class=" text-4xl text-purple-300 font-extrabold mb-2">Top 50 Endings</h1>
-        <p class="text-lg text-gray-300 mb-4">Vota por tu ending favorito</p>
-        <div class="w-full flex flex-row justify-between items-center text-white">
-          <p class="text-sm text-gray-400 mt-10">Próximamente...</p>
-          <div/>
+        <div class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg">
+          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">Endings</h3>
+          <h4 class="text-center">Aun no hay ranking de endings...</h4>
         </div>
       </div>
     </div>
   </main>
 </Layout>
-
-<script>
-  import { gsap } from "gsap";
-
-  // GSAP Hover Animation
-  document.addEventListener("DOMContentLoaded", () => {
-    const hoverSections = document.querySelectorAll(".hover-section");
-
-    hoverSections.forEach(section => {
-      section.addEventListener("mouseenter", () => {
-        gsap.to(section, {
-          duration: 0.5,
-          scale: 1.05,
-          boxShadow: "0px 15px 30px rgba(0, 0, 0, 0.5)",
-          ease: "power3.out",
-        });
-      });
-
-      section.addEventListener("mouseleave", () => {
-        gsap.to(section, {
-          duration: 0.5,
-          scale: 1,
-          boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
-          ease: "power3.out",
-        });
-      });
-    });
-  });
-</script>
 
 <style>
   :root {

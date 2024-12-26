@@ -1,35 +1,20 @@
 ---
-import videobg from "../assets/videobg.mp4";
 import ToggleMute from "./ToggleMute.svelte";
 ---
 
-<i id="pixel"></i>
-<video id="video" autoplay muted loop>
-  <source src={videobg} type="video/mp4" />
-</video>
+<div class="fixed inset-0 -z-10 overflow-hidden flex items-center justify-center">
+  <video
+    src="videobg.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="w-screen h-screen object-cover"
+  >
+    <source src="/background.mp4" type="video/mp4" />
+  </video>
+  <div class="absolute inset-0 bg-neutral-dark/0"></div>
+</div>
+<i id="pixel" class="fixed inset-0 -z-10 bg-[url('/pixel.webp')] bg-repeat"></i>
+
 <ToggleMute client:only />
-
-<style>
-  #video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  #pixel{
-    position: fixed;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/pixel.webp");
-    background-repeat: repeat;
-  }
-
-  video {
-    max-width: none;
-  }
-</style>
