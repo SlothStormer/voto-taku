@@ -17,29 +17,107 @@ const cards = [
   },
 ];
 
-//const topOpenings = getTopOpenings(); TODO
-//const topEndings = getTopEndings(); TODO
-const topOpenings: any[] = [
-  {
-    title: "Black Clover OP10",
-    grade: 9.25,
-  },
-  {
-    title: "Fullmetal Alchemist: Brotherhood OP1",
-    grade: 9.2,
-  },
-  {
-    title: "Attack on Titan S2 OP1",
-    grade: 9,
-  },
-  {
-    title: "Attack on Titan Final Season Part 2 OP",
-    grade: 8.95,
-  },
-  {
-    title: "Naruto Shippuden OP3",
-    grade: 8.9,
-  },
+const topOpenings = [
+{ title: 'Black Clover OP10', grade: 9.25 },
+  { title: 'Fullmetal Alchemist: Brotherhood OP1', grade: 9.2 },
+  { title: 'Attack on Titan S2 OP1', grade: 9 },
+  { title: 'Attack on Titan Final Season Part 2 OP', grade: 8.95 },
+  { title: 'Naruto Shippuden OP3', grade: 8.9 },
+  { title: 'Shigatsu wa Kimi no Uso OP1', grade: 8.75 },
+  { title: 'Dandadan OP', grade: 8.65 },
+  { title: 'Tokyo Ghoul OP1', grade: 8.55 },
+  { title: 'Mashle S2 OP', grade: 8.55 },
+  { title: 'Neon Genesis Evangelion OP', grade: 8.45 },
+  { title: 'Noragami S2 OP', grade: 8.4 },
+  { title: 'Naruto Shippuden OP16', grade: 8.4 },
+  { title: 'Death Note OP1', grade: 8.4 },
+  { title: 'Chainsaw man OP', grade: 8.4 },
+  { title: 'Oshi no ko S2 OP', grade: 8.3 },
+  { title: 'Love is war S2 OP', grade: 8.3 },
+  { title: 'Re:Zero OP1', grade: 8.25 },
+  { title: 'Jujutsu Kaisen S2 OP2', grade: 8.2 },
+  { title: 'The Apothecary Diaries OP1', grade: 8.1 },
+  { title: 'Frieren OP1', grade: 8.1 },
+  { title: 'Beastars OP', grade: 8.1 },
+  { title: "*****'s Paradise OP", grade: 8.05 },
+  { title: 'Go Go Loser Ranger! OP', grade: 8.05 },
+  { title: 'Death Parade OP', grade: 8.05 },
+  { title: 'Paripi Koumei OP', grade: 7.95 },
+  { title: 'Jujutsu Kaisen S2 OP1', grade: 7.95 },
+  { title: 'Parasyte OP', grade: 7.9 },
+  { title: 'Ousama Ranking OP2', grade: 7.9 },
+  { title: 'Fire force OP1', grade: 7.9 },
+  { title: 'Sword Art Online S2 OP1', grade: 7.8 },
+  { title: 'Sword Art Online OP1', grade: 7.8 },
+  { title: 'Domestic Girlfriend OP', grade: 7.8 },
+  { title: 'Akame ga kill OP2', grade: 7.8 },
+  { title: 'Overlord S3 OP', grade: 7.75 },
+  { title: 'Demon Slayer OP1', grade: 7.75 },
+  { title: 'Re:Zero OP2', grade: 7.7 },
+  { title: 'Love is war S1 OP', grade: 7.65 },
+  { title: "Jojo's Bizzare Adventures OP2", grade: 7.6 },
+  { title: '91 Days OP', grade: 7.6 },
+  { title: 'Ninja Kamui OP', grade: 7.55 },
+  { title: 'Classroom of the elite S3 OP', grade: 7.55 },
+  { title: 'Classroom of the elite S2 OP', grade: 7.55 },
+  { title: 'Wind Breaker OP', grade: 7.5 },
+  { title: 'Dororo OP1', grade: 7.5 },
+  { title: 'Kokkoku OP', grade: 7.45 },
+  { title: 'Horimiya OP2', grade: 7.45 },
+  { title: '86: Eighty Six OP2', grade: 7.45 },
+  { title: 'Black Clover OP3', grade: 7.35 },
+  { title: 'Nana OP1', grade: 7.3 },
+  { title: '86: Eighty Six OP1', grade: 7.3 },
+  { title: 'Bleach OP13', grade: 7.2 },
+  { title: 'Vinland S{aga S2 OP2', grade: 7.15 },
+  { title: 'Sword Art Online: Alicization OP1', grade: 7.15 },
+  { title: 'Hunter x Hunter (2011) OP1', grade: 7.15 },
+  { title: 'Given OP1', grade: 7.15 },
+  { title: 'Boku no Hero S1 OP', grade: 7.15 },
+  { title: 'Banana Fish OP2', grade: 7.15 },
+  { title: 'Demon Slayer S2 OP', grade: 7.1 },
+  { title: 'Blue Lock OP2', grade: 7.1 },
+  { title: 'Naruto Shippuden OP5', grade: 7.05 },
+  { title: 'Haikyuu!! S2 OP2', grade: 7.05 },
+  { title: 'Rurouni Kenshin S2 OP1', grade: 7 },
+  { title: 'Boku no hero S7 OP2', grade: 7 },
+  { title: 'Blood C OP', grade: 7 },
+  { title: 'Mushoku Tensei S2 OP', grade: 6.95 },
+  { title: 'Boku no hero S7 OP1', grade: 6.95 },
+  { title: 'Steins;Gate OP1', grade: 6.9 },
+  { title: 'Haikyuu!! S3 OP', grade: 6.9 },
+  { title: '7 Deadly Sins S1 OP1', grade: 6.9 },
+  { title: 'Re:Creators OP1', grade: 6.8 },
+  { title: 'Trinity Seven OP1', grade: 6.65 },
+  { title: 'Haikyuu!! S4 OP1', grade: 6.65 },
+  { title: 'Ao no hako OP', grade: 6.65 },
+  { title: 'Fate/stay night: Unlimited Blade Works S2 OP', grade: 6.6 },
+  { title: 'Code Geass OP1', grade: 6.6 },
+  { title: 'Bleach OP5', grade: 6.6 },
+  { title: 'Log Horizon OP', grade: 6.55 },
+  { title: 'Horimiya OP1', grade: 6.55 },
+  { title: 'Tower of God S2 OP1', grade: 6.4 },
+  { title: 'Tengen Toppa Gurren Lagann OP', grade: 6.15 },
+  { title: 'Fire force OP2', grade: 6.4 },
+  { title: 'The Asterisk War OP', grade: 6.35 },
+  { title: 'Inuyashiki: Last Hero OP', grade: 6.35 },
+  { title: 'Chivalry of a Failed Knight OP', grade: 6.3 },
+  { title: 'The Asterisk War S2 OP', grade: 6.25 },
+  { title: 'Dead dead Demons OP', grade: 6.25 },
+  { title: '7 Deadly Sins S2 OP1', grade: 6.25 },
+  { title: 'Darling in the FranXX OP', grade: 6.15 },
+  { title: 'Black Clover OP4', grade: 6.15 },
+  { title: 'Hyouken no Majutsushi ga Sekai wo Suberu OP', grade: 6 },
+  { title: 'Bartender: Kami no Glass OP', grade: 6 },
+  { title: 'Assassination Classroom S2 OP2', grade: 5.95 },
+  { title: 'Odd Taxi OP', grade: 5.8 },
+  { title: 'Kakegurui OP1', grade: 5.75 },
+  { title: 'Mecha-ude OP', grade: 5.6 },
+  { title: 'Slam Dunk OP1', grade: 5.5 },
+  { title: 'Gimai Seikatsu OP', grade: 5.3 },
+  { title: 'Naruto Shippuden OP12', grade: 5.1 },
+  { title: 'Mobile Suit Zeta Gundam OP2', grade: 5.1 },
+  { title: 'Karakuri Circus OP3', grade: 5.1 }
 ];
 ---
 
@@ -49,70 +127,91 @@ const topOpenings: any[] = [
     <div class="text-center mb-16">
       <h1 class="text-4xl md:text-6xl font-bold mb-8">
         Bienvenido a
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent-light to-accent whitespace-nowrap" 
-        >
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent-light to-accent whitespace-nowrap">
           Voto-Taku
         </span>
       </h1>
     </div>
     <div class="flex flex-wrap justify-center gap-8 mb-16 px-4">
-      {
-        cards.map((card) => (
-          <a
-            href={card.href}
-            class="w-full max-w-sm bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-8 text-center text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-xl"
-            data-astro-prefetch="load"
-          >
-            <h2 class="text-2xl md:text-3xl text-accent-light">{card.title}</h2>
-            <p class="my-4 opacity-90">{card.description}</p>
-            <div class="text-5xl">{card.emoji}</div>
-          </a>
-        ))
-      }
+      {cards.map((card) => (
+        <a
+          href={card.href}
+          class="w-full max-w-sm bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-8 text-center text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-xl"
+          data-astro-prefetch="load"
+        >
+          <h2 class="text-2xl md:text-3xl text-accent-light">{card.title}</h2>
+          <p class="my-4 opacity-90">{card.description}</p>
+          <div class="text-5xl">{card.emoji}</div>
+        </a>
+      ))}
     </div>
-    <div class="mt-16">
-      <!-- <h2 class="text-2xl md:text-3xl text-center text-accent-light mb-8 bi">
-        Rankings actuales
-      </h2> -->
-      <div class="grid md:grid-cols-2 gap-8">
-        <div
-          class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg"
-        >
-          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
-            Top Openings
-          </h3>
-          <ol class="list-decimal pl-6">
-            {
-              topOpenings.map((item) => (
-                <li class="mb-3">
-                  <span class="font-bold text-sm md:text-base">
-                    {item.title}
-                  </span>
-                  <span class="block text-accent-light text-xs md:text-sm">
-                    {item.grade}
-                  </span>
-                </li>
-              ))
-            }
-          </ol>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-accent-dark/80 border  border-accent-light/25 rounded-2xl p-6 h-96 backdrop-blur-lg">
+        <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
+          Top Openings
+        </h3>
+        <div class="slider-container overflow-hidden h-24 relative">
+          <ul id="slider" class="text-white">
+            {topOpenings.map((item, index) => (
+              <li
+                class="slider-item flex justify-between items-center mb-2"
+              >
+                <span class="font-bold text-sm md:text-base">{item.title}</span>
+                <span class="block text-accent-light text-xs md:text-sm">
+                  {item.grade}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div
-          class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg"
-        >
-          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
-            Top Endings
-          </h3>
-          <h4 class="text-center">Aun no hay ranking de endings...</h4>
-        </div>
+      </div>
+      <div class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg">
+        <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
+          Top Endings
+        </h3>
+        <h4 class="text-center">Aún no hay ranking de endings...</h4>
       </div>
     </div>
   </main>
 </Layout>
 
 <style>
-  :root {
-    margin: 0;
-    padding: 0;
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+}
+
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  animation: slide 50s linear infinite;
+}
+
+
+.slider-item {
+  height: 24px;
+  opacity: 0;
+  animation: fade-in-out 50s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fade-in-out {
+  0%, 20% {
+    opacity: 1;
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
 </style>
