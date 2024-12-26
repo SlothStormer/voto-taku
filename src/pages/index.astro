@@ -3,40 +3,44 @@ import VideoBG from "../components/VideoBG.astro";
 import Layout from "../layouts/Layout.astro";
 
 const cards = [
-    {
-        title: "Openings",
-        description: "Vota por el mejor opening",
-        emoji: "🎵",
-        href: "/openings"
-    },
-    {
-        title: "Endings",
-        description: "Vota por el mejor ending",
-        emoji: "🎶",
-        href: "/endings"
-    }
+  {
+    title: "Openings",
+    description: "Vota por el mejor opening",
+    emoji: "🎵",
+    href: "/openings",
+  },
+  {
+    title: "Endings",
+    description: "Vota por el mejor ending",
+    emoji: "🎶",
+    href: "/endings",
+  },
 ];
 
 //const topOpenings = getTopOpenings(); TODO
 //const topEndings = getTopEndings(); TODO
 const topOpenings: any[] = [
-    {
-        title: "Black Clover OP10",
-        grade: 9.25
-    },    {
-        title: "Fullmetal Alchemist: Brotherhood OP1",
-        grade: 9.2
-    },    {
-        title: "Attack on Titan S2 OP1",
-        grade: 9
-    },    {
-        title: "Attack on Titan Final Season Part 2 OP",
-        grade: 8.95
-    },    {
-        title: "Naruto Shippuden OP3",
-        grade: 8.9
-    }
-]
+  {
+    title: "Black Clover OP10",
+    grade: 9.25,
+  },
+  {
+    title: "Fullmetal Alchemist: Brotherhood OP1",
+    grade: 9.2,
+  },
+  {
+    title: "Attack on Titan S2 OP1",
+    grade: 9,
+  },
+  {
+    title: "Attack on Titan Final Season Part 2 OP",
+    grade: 8.95,
+  },
+  {
+    title: "Naruto Shippuden OP3",
+    grade: 8.9,
+  },
+];
 ---
 
 <Layout title="Inicio">
@@ -45,38 +49,60 @@ const topOpenings: any[] = [
     <div class="text-center mb-16">
       <h1 class="text-4xl md:text-6xl font-bold mb-8">
         Bienvenido a
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-white whitespace-nowrap">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent-light to-accent whitespace-nowrap"
+        >
           Voto-Taku
         </span>
       </h1>
     </div>
     <div class="flex flex-wrap justify-center gap-8 mb-16 px-4">
-      {cards.map(card => (
-        <a href={card.href} class="w-full max-w-sm bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-8 text-center text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-xl" data-astro-prefetch="load">
+      {
+        cards.map((card) => (
+          <a
+            href={card.href}
+            class="w-full max-w-sm bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-8 text-center text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-xl"
+            data-astro-prefetch="load"
+          >
             <h2 class="text-2xl md:text-3xl text-accent-light">{card.title}</h2>
             <p class="my-4 opacity-90">{card.description}</p>
             <div class="text-5xl">{card.emoji}</div>
-        </a>
-    ))}
+          </a>
+        ))
+      }
     </div>
     <div class="mt-16">
-      <h2 class="text-2xl md:text-3xl text-center text-accent-light mb-8 bi">
+      <!-- <h2 class="text-2xl md:text-3xl text-center text-accent-light mb-8 bi">
         Rankings actuales
-      </h2>
+      </h2> -->
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg">
-          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">Openings</h3>
+        <div
+          class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg"
+        >
+          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
+            Top Openings
+          </h3>
           <ol class="list-decimal pl-6">
-            {topOpenings.map(item => (
+            {
+              topOpenings.map((item) => (
                 <li class="mb-3">
-                    <span class="font-bold text-sm md:text-base">{item.title}</span>
-                    <span class="block text-accent-light text-xs md:text-sm">{item.grade}</span>
+                  <span class="font-bold text-sm md:text-base">
+                    {item.title}
+                  </span>
+                  <span class="block text-accent-light text-xs md:text-sm">
+                    {item.grade}
+                  </span>
                 </li>
-            ))}
+              ))
+            }
           </ol>
         </div>
-        <div class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg">
-          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">Endings</h3>
+        <div
+          class="bg-accent-dark/80 border border-accent-light/25 rounded-2xl p-6 h-full backdrop-blur-lg"
+        >
+          <h3 class="text-center mb-4 text-accent-light text-xl md:text-2xl">
+            Top Endings
+          </h3>
           <h4 class="text-center">Aun no hay ranking de endings...</h4>
         </div>
       </div>
