@@ -1,0 +1,29 @@
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+}
+
+#slider {
+  display: flex;
+  flex-direction: column;
+  animation: slide 120s linear infinite;
+}
+
+.slider-item {
+  height: 24px;
+  opacity: 1;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+  0% {
+    transform: translateY(0%);
+  }
+}
+

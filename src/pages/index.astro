@@ -18,7 +18,7 @@ const cards = [
 ];
 
 const topOpenings = [
-{ title: 'Black Clover OP10', grade: 9.25 },
+{  title: 'Black Clover OP10', grade: 9.25 },
   { title: 'Fullmetal Alchemist: Brotherhood OP1', grade: 9.2 },
   { title: 'Attack on Titan S2 OP1', grade: 9 },
   { title: 'Attack on Titan Final Season Part 2 OP', grade: 8.95 },
@@ -39,7 +39,7 @@ const topOpenings = [
   { title: 'The Apothecary Diaries OP1', grade: 8.1 },
   { title: 'Frieren OP1', grade: 8.1 },
   { title: 'Beastars OP', grade: 8.1 },
-  { title: "*****'s Paradise OP", grade: 8.05 },
+  { title: "Hell's Paradise OP", grade: 8.05 },
   { title: 'Go Go Loser Ranger! OP', grade: 8.05 },
   { title: 'Death Parade OP', grade: 8.05 },
   { title: 'Paripi Koumei OP', grade: 7.95 },
@@ -69,7 +69,7 @@ const topOpenings = [
   { title: 'Nana OP1', grade: 7.3 },
   { title: '86: Eighty Six OP1', grade: 7.3 },
   { title: 'Bleach OP13', grade: 7.2 },
-  { title: 'Vinland S{aga S2 OP2', grade: 7.15 },
+  { title: 'Vinland Saga S2 OP2', grade: 7.15 },
   { title: 'Sword Art Online: Alicization OP1', grade: 7.15 },
   { title: 'Hunter x Hunter (2011) OP1', grade: 7.15 },
   { title: 'Given OP1', grade: 7.15 },
@@ -156,6 +156,7 @@ const topOpenings = [
               <li
                 class="slider-item flex justify-between items-center mb-2"
               >
+                <span class="font-bold text-sm md:text-base">{index}</span>
                 <span class="font-bold text-sm md:text-base">{item.title}</span>
                 <span class="block text-accent-light text-xs md:text-sm">
                   {item.grade}
@@ -176,42 +177,5 @@ const topOpenings = [
 </Layout>
 
 <style>
-
-.slider-container {
-  position: relative;
-  overflow: hidden;
-  height: 80%;
-}
-
-
-#slider {
-  display: flex;
-  flex-direction: column;
-  animation: slide 50s linear infinite;
-}
-
-
-.slider-item {
-  height: 24px;
-  opacity: 0;
-  animation: fade-in-out 50s linear infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes fade-in-out {
-  0%, 20% {
-    opacity: 1;
-  }
-  80%, 100% {
-    opacity: 0;
-  }
-}
+@import "../styles/index.css";
 </style>
