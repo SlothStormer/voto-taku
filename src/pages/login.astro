@@ -1,53 +1,59 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 ---
 
-<Layout  title="Login">
-    <section class="relative min-h-screen bg-violet-500 flex justify-center items-center p-20">
-      <div class="relative container w-[800px] h-[500px] bg-white rounded-lg shadow-lg overflow-hidden">
-        <div class="user signinBx">
-          <div class="imgBx">
-            <img src="https://media.discordapp.net/attachments/1028468181339230268/1321966544795734058/image.png?ex=676f28c9&is=676dd749&hm=f206dc3806aaad2e4473f6868eb65c425db4803c315be67665cc6c8f2963b666&=&format=webp&quality=lossless&width=317&height=350" alt="" />
-          </div>
-          <div class="formBx">
-            <form action="" onsubmit="return false;">
-              <h2>Iniciar Sesion</h2>
-              <input type="text" name="" placeholder="Nombre de Usuario" />
-              <input type="password" name="" placeholder="Contraseña" />
-              <input type="submit" name="" value="Iniciar Sesion" />
-              <p class="signup">
-                ¿No tienes una cuenta?
-                <a href="#" onclick="toggleForm()">Registrarte.</a>
-              </p>
-            </form>
-          </div>
+<Layout title="Login">
+  <section
+    class="fixed top-0 left-0 w-full h-full min-h-screen bg-violet-500 flex justify-center items-center p-20"
+  >
+    <div
+      class="relative container w-[800px] h-[500px] bg-white rounded-lg shadow-lg overflow-hidden"
+    >
+      <div class="user signinBx">
+        <div class="imgBx">
+          <img src="image.png" alt="" />
         </div>
-        <div class="user signupBx">
-          <div class="formBx">
-            <form action="" onsubmit="return false;">
-              <h2>Crear una cuenta</h2>
-              <input type="text" name="" placeholder="Nombre de usuario" />
-              <input type="email" name="" placeholder="Direccion de Email" />
-              <input type="password" name="" placeholder="Crear Contraseña" />
-              <input type="password" name="" placeholder="Confirmar Contraseña" />
-              <input type="submit" name="" value="Registrarte" />
-              <p class="signup">
-                ¿Ya tienes una cuenta?
-                <a href="#" onclick="toggleForm()">Iniciar Sesion.</a>
-              </p>
-            </form>
-          </div>
-          <div class="imgBx">
-            <img src="https://media.discordapp.net/attachments/1028468181339230268/1321966463866638508/image.png?ex=676f28b5&is=676dd735&hm=53ca36ceeeff09d577b39ddeac01492a2ed64f4b8440928b4f54fcfb226e997d&=&format=webp&quality=lossless" alt="" />
-          </div>
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+            <h2>Iniciar Sesion</h2>
+            <input type="text" name="" placeholder="Nombre de Usuario" />
+            <input type="password" name="" placeholder="Contraseña" />
+            <input type="submit" name="" value="Iniciar Sesion" />
+            <p class="signup">
+              ¿No tienes una cuenta?
+              <button class="cursor-pointer" id="signupBtn"
+                >Registrarte.</button
+              >
+            </p>
+          </form>
         </div>
       </div>
-    </section>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+            <h2>Crear una cuenta</h2>
+            <input type="text" name="" placeholder="Nombre de usuario" />
+            <input type="email" name="" placeholder="Direccion de Email" />
+            <input type="password" name="" placeholder="Crear Contraseña" />
+            <input type="password" name="" placeholder="Confirmar Contraseña" />
+            <input type="submit" name="" value="Registrarte" />
+            <p class="signup">
+              ¿Ya tienes una cuenta?
+              <button id="signinBtn" class="cursor-pointer"
+                >Iniciar Sesion.</button
+              >
+            </p>
+          </form>
+        </div>
+        <div class="imgBx">
+          <img src="image2.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <script src="../scripts/form-handler.js"></script>
-
 
 <style>
   @import "../styles/login.css";
